@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: royalblue;
+    --col-light-1: #eee;
+    --col-dark-1: #444;
+    --main-font: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: var(--main-font);
+}
+
+
+/* ---------------------------- Navbar ---------------------------- */
+.navbar{
+    background-color: var(--bg-color);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.navbar .logo-img{
+    height: 8vh;
+}
+
+.navbar .bars-icon{
+    font-size: 1.5rem;
+    color: var(--col-light-1);
+}
+.navbar .user-option{
+    display: none;
+    /* display: block; */
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    background-color: var(--col-light-1);
+    width: 100%;
+}
+
+.user-option .option-box{
+    padding: 1rem 2rem;
+    /* border-bottom: 1px solid var(--col-dark-1); */
+}
+
+.user-option .option-box .option-link{
+    color: royalblue;
+    font-size: 1.1rem;
+}
+
+#login-link{
+    border-bottom: 1px solid var(--col-dark-1);
+}
+
+/* ---------------------------- Form ---------------------------- */
+.main-container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--col-light-1);
+}
+.main-container .form-container{
+    background-color: var(--bg-color);
+    padding: 0 1.3rem 1.3rem;
+    border-radius: 10px;
+}
+
+.form-container .login-signup-form{
+    border: 2px solid var(--col-light-1);
+    border-radius: 10px;
+    padding: 2rem 1rem 1rem;
+}
+
+.form-container .title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transform: translate(10px, 50%);
+    background-color: var(--bg-color);
+    width: fit-content;
+}
+
+
+
+
+
+
+@media (min-width: 600px){
+    .navbar .bars-icon{
+        display: none;
+    }
+    .navbar .user-option{
+        position: static;
+        width: fit-content;
+        background-color: var(--bg-color);
+    }
+    .user-option .option-box{
+        display: inline-block;
+        padding: 0;
+    }
+    #login-link{
+        border: none;
+        margin-right: 1.5rem;
+    }
+    .user-option .option-box .option-link{
+        color: var(--col-light-1);
+    }
+}
