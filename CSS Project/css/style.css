@@ -61,6 +61,10 @@ body{
     border-bottom: 1px solid var(--col-dark-1);
 }
 
+.carousel-img{
+    height: 90vh;
+}
+
 /* ---------------------------- Form ---------------------------- */
 .main-container{
     height: 90vh;
@@ -73,6 +77,8 @@ body{
     background-color: var(--bg-color);
     padding: 0 1.3rem 1.3rem;
     border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
 }
 
 .form-container .login-signup-form{
@@ -90,8 +96,68 @@ body{
     width: fit-content;
 }
 
+.login-signup-form .input-box{
+    /* border: 2px red solid; */
+    /* width: 90%; */
+    margin: 0 auto 1rem;
+    position: relative;
+}
+.input-box input{
+    height: 2rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    color: var(--col-light-1);
+    border: none;
+    border-bottom: 1px solid var(--col-light-1);
+    padding-left: 10px;
+}
+.input-box input:focus, .input-box input:valid{
+    outline: none;
+    border: 2px solid var(--col-light-1);
+    border-radius: 5px;
+}
 
+.input-box label{
+    position: absolute;
+    color: var(--col-light-1);
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+.input-box input:focus + label, .input-box input:valid + label{
+    top: 0;
+    left: 5px;
+    font-size: 0.8rem;
+    background-color: var(--bg-color);
+}
 
+.login-signup-form .submit-box{
+    /* border: 2px solid red; */
+    margin: 1rem auto;
+}
+.submit-box input{
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    border: 2px solid var(--col-light-1);
+    font-size: 1.2rem;
+    color: var(--bg-color);
+    cursor: pointer;
+}
+.submit-box input:hover{
+    background-color: var(--bg-color);
+    color: var(--col-light-1);
+}
+
+.signup-forgetpwd-box .login-signup-forget-link{
+    color: var(--col-light-1);
+    text-decoration: underline;
+}
+
+.signup-forgetpwd-box .login-signup-link-container{
+    margin-bottom: 0.3rem;
+}
 
 
 
@@ -103,6 +169,7 @@ body{
         position: static;
         width: fit-content;
         background-color: var(--bg-color);
+        display: block;
     }
     .user-option .option-box{
         display: inline-block;
@@ -113,6 +180,32 @@ body{
         margin-right: 1.5rem;
     }
     .user-option .option-box .option-link{
+        background-color: var(--col-light-1);
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--col-light-1);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .user-option .option-box .option-link:hover{
+        background-color: var(--bg-color);
         color: var(--col-light-1);
+    }
+
+    .login-signup-form .signup-forgetpwd-box{
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    .login-signup-form .gender-box{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 768px){
+    .login-signup-form .form-details-container{
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
     }
 }
