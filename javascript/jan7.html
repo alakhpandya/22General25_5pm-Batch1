@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    4. Assignment Operators: =
+        Shorthand operators:
+        a = a + b   :   a += b
+        a = a - b   :   a -= b
+        a = a * b   :   a *= b
+        a = a / b   :   a /= b
+        a = a % b   :   a %= b
+        a = a ** b   :   a **= b
+
+    5. Typeof operator:
+        typeof()
+    */
+    // let a = 10;
+    // a = a + 5;
+    // a += 5;
+    // console.log(typeof(a));
+
+    // string methods
+    'use strict';
+    // let s1 = "Happy new year! Wishing you a very prosporous 2023 ahead!";
+// index: 0123456789..............................................51
+//-ve ind:                                                987654321
+    /*
+    console.log(s1.length);
+    console.log(s1[2]);
+    console.log(s1[10]);
+    // console.log(s1[-10]);
+    // console.log(s1[-3]);
+    console.log(s1[4]);
+    console.log(s1[0]);
+
+    // string slicing
+    console.log(s1.slice(6, 27));
+    console.log(s1.slice(4, -5));
+    */
+    /*
+    Ask a string from user & remove first 3 characters & last 5 characters from it & log result on the console without using -ve index. Assume user will enter string with length of atleast 9 characters.
+    
+    s1 = "user given string."
+    len = s1.length
+    last_index = len - 4
+    s1.slice(3, last_index)
+    */
+
+    // console.log(s1.substring(6, 27));     // does not support -ve index
+    // console.log(s1.substring(6, -5));     // does not support -ve index
+    /*
+    let s1 = "Happy new year! Wishing you a very prosporous 2023 ahead!";
+    // index: 0123456789..............................................51
+    //-ve ind:                                                987654321
+    let s2 = "Thank you!"
+    console.log(s1.substr(4, 11));
+    console.log(s1.substr(-14, 11));
+    console.log(s1.toUpperCase());
+    console.log(s1.toLowerCase());
+    console.log(s1 + s2);
+    console.log(s1.concat(s2));
+    let a = 5;
+    let b = '10';
+    // console.log(s2 + a);
+    // console.log(s2.concat(a));
+    console.log(a + s2);
+    // console.log(a.concat(s2));
+    console.log(s1.concat('_', s2));
+    console.log(s1 + "_" + s2);
+
+    console.log(s1.indexOf('W'));
+    console.log(s1.indexOf('Z'));
+    console.log(s1.indexOf('a'));
+    console.log(s1.lastIndexOf('a'));
+
+    console.log(s1.charAt(43));
+    console.log(s1.charCodeAt(43));
+
+    console.log(s1.replace('you', 'us'));
+    console.log(s1.replace('a', 'A'));
+
+    let s3 = "                 Happy Birthday!      "
+    console.log(s3.length);
+    console.log(s3.trim());
+    console.log(s3.trim().length);
+    */
+    // let date = prompt("Enter date of your birthday in dd format: ");    // 3
+    // let month = prompt("Month in mm format:");
+    // let dob = date.padStart(2, '0') + "/" + month.padStart(2, '0') + "/" + "2023";
+    // console.log(dob);
+    /*
+    let s1 = "7"
+    console.log(s1.padStart(3, '0'));
+    console.log(s1.padEnd(5, '8'));
+    console.log(s1.padEnd(5, 'z'));
+
+    s1 = s1.padEnd(4, '!');
+    console.log(s1);
+    */
+
+    let marks = 50;
+    if (marks >= 35){
+        console.log('Pass');
+    }
+    else{
+        console.log('Fail');
+    }
+
+    let number = 48;
+    if (number > 0){
+        console.log('Positive.');
+    }
+    else if (number == 0){
+        console.log('Neutral.');
+    }
+    else{
+        console.log('Negative.');
+    }
+
+    // golf
+    /*
+    par: 7
+    strokes                     Score
+        1                       HOLE IN ONE!
+        2 TO 5 (2 to PAR-2)     EAGLE
+        6 (PAR-1)               BIRDIE
+        7 (=PAR)                PAR
+        8 (PAR+1)               BOGEY
+        9, 10 (PAR+2\PAR+3)     DOUBLE BOGEY
+        >10 (>PAR+3)            GO HOME
+
+    Write a js code that asks PAR & STROKES from the user & log the score on the console accordingly.
+    */
+</script>
+</html>
+<!-- Next CLass: how to create function -->
