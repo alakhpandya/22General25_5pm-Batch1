@@ -107,6 +107,7 @@
     console.log(s1);
     */
 
+    /*
     let marks = 50;
     if (marks >= 35){
         console.log('Pass');
@@ -125,6 +126,7 @@
     else{
         console.log('Negative.');
     }
+    */
 
     // golf
     /*
@@ -140,6 +142,38 @@
 
     Write a js code that asks PAR & STROKES from the user & log the score on the console accordingly.
     */
+    function golf(par,score){
+        if (score == 1) {
+            console.log("Hole in One !!");
+        }
+        else if (score >= 2 && score <= par - 2) {
+            console.log("Eagle!!");
+        }
+        else if (score == par - 1) {
+            console.log("Birdie!!");
+        }
+        else if (score == par) {
+            console.log("PAR !!");
+        }
+        else if (score == par + 1) {
+            console.log("Bogie !!");
+        }
+        else if (score == (par + 2) || score == (par + 3)) {
+            console.log("Double Bogie !!");
+        }
+        else if (score >= (par + 4)) {  
+            console.log("Go Home!!");
+        }
+        else {
+            console.log("Enter Valid Number:-");
+        }
+    }
+
+    
+    var par = Number(prompt("Enter The value of Par:-"))
+    var score = Number(prompt("Enter The Strokes:-"))
+    
+    golf(par,score);
 </script>
 </html>
 <!-- Next CLass: how to create function -->
