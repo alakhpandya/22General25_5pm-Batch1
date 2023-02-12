@@ -98,19 +98,25 @@ let bollywoodHero = {
 
 function propertyChecker(obj, property){
     // Your code goes here
+    if (obj.hasOwnProperty(property)){
+        return obj[property];
+    }
+    else{
+        return "Sorry, this property does not exist in the object."
+    }
 }
 
 // test case-1:
-/*
+
 console.log(propertyChecker(bollywoodHero, 'hat'));
-output:
-Pink
-*/
+// output:
+// Pink
+
 // test case-2:
-/*
+
 console.log(propertyChecker(bollywoodHero, 'tail'));
-output:
-Sorry, this property does not exist in the object.
-*/
+// output:
+// Sorry, this property does not exist in the object.
+
 
 // Next Class: Objects as lookup table

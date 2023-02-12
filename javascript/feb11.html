@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Object as a lookup table
+    /*
+    let a = Number(prompt("a :"));
+    let b = Number(prompt("b :"));
+    let op = prompt("+, -, * or /:");
+    */
+    /*
+    switch(op){
+        case '+':
+            console.log(a + b);
+            break;
+        case '-':
+            console.log(a - b);
+            break;
+        case '*':
+            console.log(a * b);
+            break;
+        case '/':
+            console.log(a / b);
+            break;
+    }
+    */
+    /*
+    let lookupObject = {'+' : a + b, '-' : a - b, '*' : a * b, '/' : a / b};
+    console.log(lookupObject[op]);
+    */
+    
+
+    // Profile Lookup coding challenge
+    /*
+    Write code inside the lookUpProfile function so that when user passes name of a person and the property they want to know, our function returns that property's value for that particular person.
+    
+    For example, lookUpProfile("Dhiraj", "likes") should return ["Coding", "Teaching", "Pooja"]
+    
+    If the name is not present in the contacts array, our function should return "No such contact", and if a property is not found corresponding to that person then our function should return "No such property"
+    */
+    /*
+    var contacts = [
+        {
+            "firstName":"Hetal",
+            "lastName":"Tewar",
+            "number":"0543236543",
+            "likes": ["Panipuri", "Sleep", "Shopping"]
+        },
+        {
+            "firstName":"Harry",
+            "lastName":"Potter",
+            "number":"0994372684",
+            "likes": ["Hogwarts", "Magic", "Hagrid"]
+        },
+        {
+            "firstName":"Sherlock",
+            "lastName":"Holmes",
+            "number":"05487345643",
+            "likes": ["Intriguing Cases", "Violin"]
+        },
+        {
+            "firstName":"Dhiraj",
+            "lastName":"Poojara",
+            "number":"09879472527",
+            "likes": ["Coding", "Teaching", "Pooja"]
+        },
+    ];
+
+    function lookUpProfile(name, prop){
+        // Write your code here
+        var i, present=false;
+        for(i = 0; i < contacts.length; i++){
+            if (contacts[i]["firstName"] == name){
+                present=true;
+                break;
+            }
+        }
+        if (!present){
+            return "No such contact";
+        }
+        if (!contacts[i].hasOwnProperty(prop)){
+            return "No such property";
+        }
+        return contacts[i][prop];
+    }
+
+    var data1 = lookUpProfile("Alakh", "number");
+    var data2 = lookUpProfile("Dhiraj", "profession");
+    var data3 = lookUpProfile("Hetal", "likes");
+    var data4 = lookUpProfile("Sherlock", "lastName");
+
+    // Test Case 1:
+    console.log(data1);
+    // Output:
+    // No such contact
+
+    // Test Case 2:
+    console.log(data2);
+    // Output:
+    // No such property
+
+    // Test Case 3:
+    console.log(data3);
+    // Output:
+    // ["Panipuri", "Sleep", "Shopping"]
+
+    // Test Case 4:
+    console.log(data4);
+    // Output:
+    // Holmes
+    */
+
+    // Programming Exercises:
+    /*
+    1. Ask user for 9 elements & create a 2D array with 3 rows & 3 columns. Use a function named "scanArray()" to take 
+    values from user and to return the array to the main program.
+    arr = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+    ]
+    */
+   /*
+    function scanArray(){
+        let arr = [], internalArray = [];
+        for(let j = 0; j < 3; j++){
+            internalArray = [];
+            for(let i = 0; i < 3; i++){
+                element = Number(prompt("Element:"));
+                internalArray.push(element);
+            }
+            arr.push(internalArray);
+        }
+        return arr;
+    }
+
+    let a = scanArray(), b = scanArray();
+    */
+    /*
+    2. Ask user for the dimensions (rows & columns) of a 2D array and take elements from user accordingly. Return the resultant array that is formed by elements given by user. Use function 'scanCustomArray()' for this.
+    */
+    // HW:
+    /*
+    1. Ask two 3x3 matrices from user using scanArray() function, add those two matrices using a function named add3x3Matrices() that takes two 3x3 matrices in argument & returns the resultant 3x3 matrix.
+
+    2. Ask two 3x3 matrices from user using scanArray() function, perform matrix multiplication on them using a function named multiply3x3Matrices() that takes two 3x3 matrices in argument & returns the resultant 3x3 matrix.
+
+    3. Ask a 3x3 matrix from user using scanArray() function, create a function called findDeterminant() that takes a 3x3 matrix in the argument and returns value of its determinant.
+    */
+</script>
+</html>
