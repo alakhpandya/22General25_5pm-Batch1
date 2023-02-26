@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Loops: while loop, do-while loop, for loop
+    /*
+    let i = 1;
+    while (i <= 10){
+        console.log(i);
+        i++;
+    }
+    */
+    /*
+    let i = 10;
+    do{
+        console.log(i);
+        i--;
+    }while(i > 0);
+    */
+
+    /*
+    Class Work:
+    1. Write a program that logs number of digits of an integer on the console.
+    
+    let n = Number(prompt("n:"));
+    digit = 0;
+    if (n == 0){
+        digit = 1;
+    }
+
+    do{
+        n = Math.floor(n / 10);
+        digit++;
+    }while (n > 0);
+    
+    console.log(digit);
+    */
+
+    //
+    /*
+    let n;
+    let count=0;
+    for(let i = 0; i < 1000000; i++){
+        n = Math.random();      // returns random numbers in interval [0, 1)
+        // console.log(n);
+        if (n == 0){
+            count++;
+        }
+    }
+    console.log(count);
+    */
+    // Define an array containing 10 integers. Ask an integer from user and print whether that integer is in the array or not.
+
+
+    // Get me an array of 10 distinct random numbers between 0 to 1 (may include 0 but excluding 1)
+    /*
+    let m, n = [];
+    let flag;
+    while (1){
+        // m = Math.round((Math.random()), 4);
+        m = Math.random();
+        flag = 0;
+        for(let j = 0; j < n.length; j++){
+            if(n[j] == m){
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0){
+            n.push(m);
+        }
+        if(n.length == 10){
+            break;
+        }
+    }
+    console.log(n);
+    */
+
+    // Write a code that logs 10 random fractions in the interval [5, 15) on the console
+    /*
+    for(let i = 0; i < 10; i++){
+        m = (Math.random()*10)+5;
+        console.log(m)
+    }
+    */
+    
+    // Some useful important built-in functions
+    // parseInt() & parseFloat()
+    /*
+    let a = "103";
+    let b = parseInt(a);
+    console.log(typeof(a));
+    console.log(typeof(b));
+
+    let c = "154.95";
+    let d = parseInt(c);
+    let e = parseFloat(c);
+    console.log(d);
+    console.log(e);
+    console.log(typeof(e));
+    */
+    /*
+    console.log(parseInt("1101", 2));
+    console.log(parseInt("FF", 16));
+    */
+</script>
+</html>
+
+<!-- 
+    Next Class: map(), filter() & reduce() functions, call back functions, Arrow function
+ -->
