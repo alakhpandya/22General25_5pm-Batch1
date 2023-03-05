@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    function fact(n){
+        let f = 1;
+        for(let i = 1; i <= n; i++){
+            f = f * i;
+        }
+        return f;
+    }
+    function X(p){
+        // console.log(p*p*p);
+        return p*p*p;
+    }
+    function avg(a, b){
+        return (a + b)/2;
+    }
+
+    let myArray = [3, 5, 2, 4, 7, 6, 1];
+    let factorialArray = myArray.map(fact);
+    // console.log(myArray.map(X));
+    let newArray = myArray.map(X);
+    // Your code goes here
+    console.log(factorialArray);
+    // console.log(newArray);
+    */
+
+    /*
+    function aboveAverage(x){
+        return x > avg;
+    }
+
+    let sensor_data = [-25, -30, 0, -12, -34, -28, -40, 3, 5];
+    let avg, sum = 0;
+    for(let i = 0; i < sensor_data.length; i++){
+        sum += sensor_data[i];
+    }
+    avg = sum / sensor_data.length;
+    console.log(avg);
+
+    // console.log(aboveAverage(-20));
+    // let aboveAverageTemperatures = [];
+    
+    // let aboveAverageTemperatures = sensor_data.filter(aboveAverage);
+    
+    console.log(aboveAverageTemperatures)
+    */
+
+    /*
+    function absAddition(a, b){
+        return Math.abs(a) + Math.abs(b);
+    }
+
+    let transactions = [1000, -900, -20, 100, -50, 500, -100, 50, -30]
+    let totalTransactions;
+    // Your code here
+    
+    totalTransactions = absAddition(transactions[0], transactions[1]);
+    for(let i = 2; i < transactions.length; i++){
+        totalTransactions = absAddition(totalTransactions, transactions[i])
+    }
+    
+    totalTransactions = transactions.reduce(absAddition);
+    console.log(totalTransactions);
+    */
+
+
+    // Arrow Function
+    /*
+    function fact(n){
+        let f = 1;
+        for(let i = 1; i <= n; i++){
+            f = f * i;
+        }
+        return f;
+    }
+    */
+    // Writing above function as an arrow function:
+
+    const fact = (n) => {
+        let f = 1;
+        for(let i = 1; i <= n; i++){
+            f = f * i;
+        }
+        return f;
+    }
+
+    console.log(fact(5));
+    /*
+    let avg = (a, b) => {
+        let average = (a + b) / 2;
+        return average;
+    }
+    */
+    var display = () => {
+        console.log("Hello World!");
+    }
+
+    let avg = (a, b) => (a + b)/2;
+
+</script>
+</html>
+<!-- 
+    More about arrow functions
+ -->
