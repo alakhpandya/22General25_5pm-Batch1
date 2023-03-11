@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Creating anonymous arrow function
+    // (n) => {
+    //     let f = 1;
+    //     for(let i = 1; i <= n; i++){
+    //         f = f * i;
+    //     }
+    //     return f;
+    // }
+
+    /*
+    let numbers = [2,5,7,9,3,4];
+    let factorials = numbers.map(
+        (n) => {
+        let f = 1;
+        for(let i = 1; i <= n; i++){
+            f = f * i;
+        }
+        return f;
+        }
+    )
+    console.log(factorials);
+    
+
+    const myObject = {
+        name : "Suresh",
+        surname : "Pandit",
+        age : 21,
+        course : "Full Pyramid"
+    };
+    
+    myObject = {
+        name : "Suresh",
+        surname : "Pandit",
+        age : 19,
+        course : "Full Pyramid"
+    }
+    
+    
+    // myObject["name"] = "Jeel";
+    // myObject["surname"] = "Patel"
+    // myObject["age"] = 19;
+    // myObject["course"] = "Level - 5";
+    // myObject["city"] = "Los Angeles";
+
+    // Object.freeze(myObject);
+    // myObject["age"] = 19;
+    // console.log(myObject);
+
+    // Write a arrow function that takes an object in argument and freezes it.
+
+    const freezeObject = () => {
+        Object.freeze(myObject);
+    }
+
+    freezeObject()
+
+    // Arrays
+    const yourArray = [1,2,3,4,5];
+    // yourArray = [6,7,8,9,10];
+    Object.freeze(yourArray);
+    
+    yourArray[0] = 6;
+    yourArray[1] = 7;
+    
+    console.log(yourArray);
+    console.log(typeof(yourArray));
+    */
+
+    // default arguments
+    /*
+    const avg = (a, b, c = 10) => (a + b + c)/3;
+    console.log(avg(10, 20));
+    console.log(avg(10, 20, 40));
+    */
+
+    // variable length arguments - rest operator
+    /*
+    const avg = (a, b = 100, ...args) => {
+        console.log(a);
+        console.log(b);
+        console.log(args);
+        // let sum = 0;
+        // for (let i = 0; i < args.length; i++) {
+        //     sum += args[i];            
+        // }
+        // return sum / args.length;
+    }
+
+    console.log(avg(10));
+    console.log(avg(10, 20));
+    console.log(avg(10, 20, 30, 40, 50));
+    */
+
+    // Copying an array into another using rest operator
+    /*
+    let sampleArray = [1,2,3,4,5];
+    // let sampleArray2 = sampleArray;
+    let sampleArray2 = [...sampleArray];
+    sampleArray.pop();
+    console.log(sampleArray);
+    console.log(sampleArray2);
+    */
+
+    // Destructuring Assignment
+    let result = {
+        "Maths" : 91,
+        "Physics" : 92,
+        "JavaScript" : 99
+    }
+
+    /*
+    let
+    Maths = result.Maths,
+    Physics = result.Physics,
+    JavaScript = result.JavaScript;
+    */
+    /*
+    // let {Maths, Physics, JavaScript} = result;
+    let {JavaScript, Physics, Maths} = result;
+
+    console.log(Maths);
+    console.log(Physics);
+    console.log(JavaScript);
+    */
+
+    /*
+    let {Physics : sub1, Maths : sub2, JavaScript : sub3} = result
+    console.log(sub1);
+    console.log(sub2);
+    console.log(sub3);
+    */
+
+    let {JavaScript, Maths} = result
+    console.log(JavaScript);
+    console.log(Maths);
+
+    /*
+    let {JavaScript, Maths, Chemistry} = result
+    console.log(Chemistry);
+    */
+    // result["Chemistry"] = 93;
+    
+    // Next Class: Intro to JSON
+</script>
+</html>
