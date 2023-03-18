@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // json: JavaScript Object Notation
+    /*
+    let student = {
+        name : "Paritosh",
+        gender : "M",
+        age : 19,
+        course : "Full Pyramid",
+        batch : "Club",
+        college : "DAIICT"
+    }
+
+    // name = student["name"];
+    // course = student["course"];
+    // college = student["college"];
+
+    let {name : student_name, course : course_taken, college : institute} = student
+
+    console.log(student_name);
+    console.log(course_taken);
+    console.log(institute);
+
+    */
+
+    /*
+    const AVG_TEMPERATURES = {
+        today : 37,
+        tomorrow : 39.5,
+    };
+
+    function getTempOfTomorrow(avgTemperatures){
+        "use strict";
+
+        let {tomorrow : tempOfTomorrow} = avgTemperatures;
+
+        return tempOfTomorrow;
+    }
+
+    console.log(getTempOfTomorrow(AVG_TEMPERATURES));
+    // Output: 39.5
+    */
+
+    /*
+    const LOCAL_FORECAST = {
+        today : { min: 22, max: 38.5},
+        tomorrow : { min: 18.5, max: 34}
+    };
+
+    function getMaxOfTomorrow(forecast){
+        "use strict";
+        
+        let {tomorrow} = forecast;
+        let {max : maxOfTomorrow} = tomorrow;
+
+        return maxOfTomorrow;
+    }
+
+    console.log(getMaxOfTomorrow(LOCAL_FORECAST));
+    // output: 34
+    */
+
+
+    // Destructuring an array
+    // myArray = [12, 45, 766, 43, 90];
+    // let [a, b, c, d, e] = myArray;
+    // let [a, b, , d, e] = myArray;
+    // let [a, b] = myArray;
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
+    // console.log(d);
+    // console.log(e);
+
+    // let [, , a, ,b] = myArray;
+    // console.log(a);
+    // console.log(b);
+
+    // Swapping values of two variables using destructuring
+    // let a = 10, b = 20;
+    // console.log(a);
+    // console.log(b);
+    // [a, b] = [b, a];
+    // console.log(a);
+    // console.log(b);
+
+    // using rest operator in destructuring array
+    // let myArray = [12, 45, 766, 43, 90, -111, 233, 67, 43];
+    // let [a, , b, , , ...c] = myArray;
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
+
+
+    const stats = {
+        max : 56.78,
+        standard_deviation : 4.34,
+        median : 34.54,
+        mode : 23.87,
+        min : -0.75,
+        average : 35.85
+    };
+
+    function findRange(obj){
+        'use strict';
+
+        // write your code here
+
+        return range;
+    }
+
+    console.log(findRange(stats))
+    // output: 57.53 
+</script>
+</html>
