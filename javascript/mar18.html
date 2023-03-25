@@ -111,15 +111,22 @@
         average : 35.85
     };
 
+    /*
     function findRange(obj){
         'use strict';
 
-        // write your code here
+        let {max, min} = obj;
+        let range = max - min;
 
         return range;
     }
+    */
+    function findRange({max, min}){
+        let range = max - min;
+        return range;
+    }
 
-    console.log(findRange(stats))
+    console.log(findRange(stats));
     // output: 57.53 
 </script>
 </html>

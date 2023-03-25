@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // He said "I won't come on Monday."
+    // Template Literals
+    /*
+    myString = `Today is Saturday.
+I am very excited for tomorrow.
+He said "I won't come on Monday."`;
+    console.log(myString);
+
+    let customer_array = ["Kavish", "Parth", "Pratik", "Mitanshu", "Umang"];
+    let mail = [];
+    for(let i = 0; i < customer_array.length; i++)
+    {
+        temp = `Hello ${customer_array[i]}!
+        Lorem ipsum, dolor sit amet ${customer_array[i]} consectetur adipisicing elit. ${customer_array[i]}, Voluptatum nostrum nisi cum ea temporibus necessitatibus sit tempora autem excepturi ${customer_array[i]}.`
+        mail.push(temp);
+    }
+    console.log(mail[2]);
+    */
+
+    // Coding Challenge
+    const result = {
+        success: ["max-length", "no-amd", "prefer-arrow-functions"],
+        failure: ["no-var", "var-on-top", "linebreak"],
+        skipped: ["id-blacklist", "no-dup-keys"]
+    };
+
+    function makeList(arr){
+        const resultDisplayArray = [];
+        // Write your code here
+        return resultDisplayArray
+    }
+
+    console.log(makeList(result.failure))
+    /*
+    Complete the above code so that the output is:
+[<li class="text-warning">no-var</li>, <li class="text-warning">var-on-top</li>, <li class="text-warning">linebreak</li>]
+    */
+
+    // Object Literals
+    /*
+    const createPerson = (name, age, gender) => {
+        return {
+            name : name,
+            age : age,
+            gender : gender
+        }
+    }
+    
+    // const createPerson = (name, age, gender) => ({name : name, age : age, gender : gender})
+    const createPerson = (name, age, gender) => ({name, age, gender})
+    // let p1 = createPerson("Rushir", 19, "Male");
+    // console.log(p1);
+    let p2 = createPerson("Shweta", 18, "Female");
+    console.log(p2);
+    */
+
+    /*
+    var bicycle = {
+        wheels : 2,
+        gear : 3,
+        // changeGear : function (new_gear){
+        //     bicycle.gear = new_gear;
+        // }
+        changeGear(new_gear){
+            this.gear = new_gear;
+        }
+    }
+
+    var motorBike = {
+        wheels : 2,
+        displacement : '750CC',
+        gear : 2,
+        changeGear(new_gear){
+            this.gear = new_gear;
+        }
+    }
+
+    // console.log(bicycle);
+    bicycle.changeGear(5);
+    console.log(bicycle);
+    // bicycle.changeGear(10);
+    // console.log(bicycle);
+
+    motorBike.changeGear(3);
+    console.log(motorBike);
+
+    function myFunc(){
+        let var1 = 10;
+        this.var1 = 20;     // 'this' is window object here
+    }
+
+    // window.alert('Message');
+    myFunc();
+    console.log(window);
+    */
+
+    var SpaceShuttle = function (targetPlanet){
+        this.planet = targetPlanet;
+    }
+
+    let discovery = new SpaceShuttle("Jupiter");
+    let chandrayaan2 = new SpaceShuttle("Moon");
+    console.log(discovery);
+    console.log(chandrayaan2);
+
+    // Next Class: create class, constructor function etc
+</script>
+</html>
