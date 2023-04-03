@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // create class, constructor function etc
+    /*
+    class SpaceShuttle{
+        constructor (targetPlanet){
+            this.targetPlanet = targetPlanet;
+        }
+    }
+
+    let chandrayaan1 = new SpaceShuttle("Moon");
+    console.log(chandrayaan1);
+    */
+
+    /*
+    function createVegetable(){
+        class Vegetable{
+            constructor (color){
+                this.color = color;
+            }
+        }
+        return Vegetable;
+    }
+
+    let leafyVegetables = createVegetable();
+    let spinach = new leafyVegetables("Green");
+
+    let kitchenFruits = createVegetable();
+    let tomato = new kitchenFruits("Red");
+    */
+
+    // Abstraction
+    class Book{
+        constructor (writer){
+            this.__author = writer;
+        }
+        // setter
+        set writer(newWriter){
+            this.__author = newWriter;
+        }
+        // getter
+        get writer(){
+            return this.__author;
+        }
+    }
+
+    let rdpd = new Book("Robert Kiosaki");
+    rdpd.writer = "Alakh Pandya";
+    // console.log(rdpd.writer);
+    // console.log(rdpd.__author);
+    console.log(rdpd.writer);
+
+    /*
+    Create a class named 'Thermostat' and create an abstract variable __cutOffTemperature in constructor function of it. Create getter & setter methods to access & modify that variable using a dummy variable 'temperature'. Test your code.
+    */
+</script>
+</html>
