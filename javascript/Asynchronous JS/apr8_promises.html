@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Promises
+
+    let is_open = false;
+
+    let order = (time, task) => {
+        return new Promise((resolve, reject) => {
+            if (is_open){
+                // resolve
+                setTimeout(() => {
+                    resolve(task());
+                }, time)
+            }
+            else{
+                // reject
+                reject(console.log("Outlet is closed."));
+            }
+        })
+    }
+
+    order(0, () => console.log("Receiving Order."))
+    .then(() => order(2000, () => console.log("Order Placed.")))
+    .then(() => order(3000, () => console.log("Vegetables are chopped.")))
+    .then(() => order(1000, () => console.log("Masala, noodles, vegetables & water added to the bowl.")))
+    .then(() => order(4000, () => console.log("Boiling completed.")))
+    .then(() => order(1000, () => console.log("Plate is taken.")))
+    .then(() => order(4000, () => console.log("Sandwich is ready.")))
+    .then(() => order(2000, () => console.log("Here you are!")))
+
+    .catch(() => console.log("Refund to customer."))    // Executed when promise gets rejected
+
+    .finally(() => console.log("Let's calculate profit!"))  // Executed Always
+</script>
+</html>
