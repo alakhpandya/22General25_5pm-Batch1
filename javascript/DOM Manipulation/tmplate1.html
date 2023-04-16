@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tmplate1.css">
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <p>Favourite Movie Franchise</p>
+            <button class="movie-names">The Matrix</button>
+            <button class="movie-names">Star Wars</button>
+            <button class="movie-names">Harry Potter</button>
+            <button class="movie-names">Lord of the Rings</button>
+            <button class="movie-names" id="favorite-movie">Marvel</button>
+        </div>
+    </div>
+</body>
+<script>
+    // DOM: Document Object Model
+    // Selecting elements/selectors- 5 main ways
+
+    // Selecting by ID
+    // console.log(document.getElementById('favorite-movie'));
+    let favorite_movie = document.getElementById('favorite-movie');
+    // console.log(favorite_movie);
+    // favorite_movie.style.backgroundColor = "orange";
+
+    // Selecting by tag name
+    let movies = document.getElementsByTagName('button');
+    // console.log(movies);
+    // console.log(movies);
+    
+    for (let i = 0; i < 5; i++){
+        movies[i].style.backgroundColor = "red";
+    }
+
+    // let headline = document.getElementsByTagName('p');
+    // headline[0].style.backgroundColor = "pink";
+    
+    // Selecting by class name
+    let container = document.getElementsByClassName('box')[0];
+    // container[0].style.backgroundColor = "greenyellow";
+    // document.getElementsByClassName('box')[0].style.fontFamily = 'cursive';
+    
+
+    // Query Selector
+    let movie = document.querySelector('.movie-names');
+    // console.log(movie);
+    // let box = document.querySelector('.box');
+    // console.log(box);
+
+    document.querySelector('.box').style.backgroundColor = "orangered";
+
+    // console.log(document.querySelector('div'));
+    // console.log(document.querySelector('#favorite-movie'));
+
+    // Query Selector All
+    // console.log(document.querySelectorAll('div'))
+    console.log(document.querySelectorAll('.movie-names'));
+    console.log(document.querySelectorAll('#favorite-movie'));
+
+</script>
+</html>
