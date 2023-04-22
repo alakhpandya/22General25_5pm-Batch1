@@ -11,14 +11,15 @@
     <div class="main">
         <div class="box">
             <p>Favourite Movie Franchise</p>
-            <button class="movie-names">The Matrix</button>
-            <button class="movie-names">Star Wars</button>
-            <button class="movie-names">Harry Potter</button>
-            <button class="movie-names">Lord of the Rings</button>
-            <button class="movie-names" id="favorite-movie">Marvel</button>
+            <div class="movie-box"><button class="movie-names">The Matrix</button></div>
+            <div class="movie-box"><button class="movie-names">Star Wars</button></div>
+            <div class="movie-box"><button class="movie-names">Harry Potter</button></div>
+            <div class="movie-box"><button class="movie-names">Lord of the Rings</button></div>
+            <div class="movie-box"><button class="movie-names btn" id="favorite-movie">Marvel</button></div>
         </div>
     </div>
 </body>
+<!-- 
 <script>
     // DOM: Document Object Model
     // Selecting elements/selectors- 5 main ways
@@ -28,6 +29,7 @@
     let favorite_movie = document.getElementById('favorite-movie');
     // console.log(favorite_movie);
     // favorite_movie.style.backgroundColor = "orange";
+    favorite_movie.style.fontFamily = 'cursive';
 
     // Selecting by tag name
     let movies = document.getElementsByTagName('button');
@@ -63,5 +65,39 @@
     console.log(document.querySelectorAll('.movie-names'));
     console.log(document.querySelectorAll('#favorite-movie'));
 
+</script> 
+-->
+
+<script>
+    /*
+    let newMovie = document.createElement('button');
+    let box = document.querySelector('.box');
+
+    box.appendChild(newMovie);
+
+    newMovie.innerText = "Fast & Furious";
+
+    let favorite_movie = document.getElementById('favorite-movie');
+    // console.log(favorite_movie);
+    console.log(favorite_movie.getAttribute('class'));
+    console.log(favorite_movie.getAttribute('height'));
+    
+    newMovie.setAttribute('class', 'movie-names');
+    */
+
+
+    // newMovie.removeAttribute('class')
+    // given_classes = favorite_movie.getAttribute('class'); /* movie-names btn */
+    // new_classes = given_classes + " red-text" /* movie-names btn red-text */
+    // favorite_movie.setAttribute('class', new_classes);
+    /*
+    // console.log(favorite_movie.classList);
+    favorite_movie.classList.add('red-text');
+    // favorite_movie.classList.remove('movie-names');
+    console.log(favorite_movie.classList.contains('movie-names'));
+
+    favorite_movie.remove();
+    */
 </script>
+
 </html>

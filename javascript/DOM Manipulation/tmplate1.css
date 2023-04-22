@@ -34,16 +34,21 @@
     background-color: rgb(182, 180, 180);
     outline: none;
 }
-
-.box button{
+.movie-box{
+    width: 100%;
+}
+.movie-names{
     margin-bottom: 1px;
     width: 100%;
-    
     /* width: 342px; */
     font-size: 17px;
     padding: 5px 0px 5px 0px;
     /* margin: 1px 0px 1px 0px; */
     transition: background-color 0.5s;
+}
+
+.red-text{
+    color: red;
 }
 
 .box p{
