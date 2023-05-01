@@ -13,9 +13,9 @@
             <p>Favourite Movie Franchise</p>
             <div class="movie-box"><button class="movie-names">The Matrix</button></div>
             <div class="movie-box"><button class="movie-names">Star Wars</button></div>
+            <div class="movie-box"><button class="movie-names btn" id="favorite-movie">Marvel</button></div>
             <div class="movie-box"><button class="movie-names">Harry Potter</button></div>
             <div class="movie-box"><button class="movie-names">Lord of the Rings</button></div>
-            <div class="movie-box"><button class="movie-names btn" id="favorite-movie">Marvel</button></div>
         </div>
     </div>
 </body>
@@ -85,7 +85,6 @@
     newMovie.setAttribute('class', 'movie-names');
     */
 
-
     // newMovie.removeAttribute('class')
     // given_classes = favorite_movie.getAttribute('class'); /* movie-names btn */
     // new_classes = given_classes + " red-text" /* movie-names btn red-text */
@@ -112,10 +111,41 @@
     // Traversing through DOM
     let main = document.querySelector('.main');
     // console.log(main);
-    console.log(main.childNodes.length);
-    console.log(main.childElementCount);
+    // console.log(main.childNodes.length);
+    // console.log(main.childElementCount);     -   count of child elements
 
     // Elements vs. Nodes
+
+    // Traversing through children
+    /*
+    console.log(main.childNodes);   // array of all the child nodes
+    console.log(main.children);     // array of all the child elements
+    console.log(main.children[0].children[2].children[0].children);
+    */
+
+    // Traversing through parents
+    /*
+    const marvel = document.getElementById('favorite-movie');
+    console.log(marvel);
+    // console.log(marvel.parentElement);
+    // console.log(marvel.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement);
+    console.log(marvel.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode);
+    console.log(main.firstChild);
+    console.log(main.firstElementChild);
+    console.log(main.lastChild);
+    console.log(main.lastElementChild);
+    */
+
+    // Traversing through siblings
+    /*
+    const parent_of_marvel = document.querySelectorAll('.movie-box')[2];
+    // console.log(parent_of_marvel);
+    // console.log(parent_of_marvel.previousSibling);      // will return previous node sibling
+    // console.log(parent_of_marvel.previousElementSibling);
+    // console.log(parent_of_marvel.nextSibling);
+    // console.log(parent_of_marvel.nextElementSibling);
+    console.log(parent_of_marvel.nextElementSibling.nextElementSibling);
+    */
 </script>
 
 </html>

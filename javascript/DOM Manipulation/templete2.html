@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, #02183a, #05204b, #0c275d, #172f70, #233682);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #ex {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 3rem;
+        margin: 3rem 0;
+        border: #fff 2px solid;
+        border-radius: 15px;
+        padding: 6rem 2rem;
+        font-size: 20px;
+    }
+
+    .eg {
+        border: 2px white solid;
+        border-radius: 15px;
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .eg h5 {
+        margin-bottom: 3rem;
+    }
+
+    .eg a {
+        border: 2px white solid;
+        border-radius: 15px;
+        padding: 0.7rem;
+    }
+
+    .eg a:hover {
+        background-color: #fff;
+        color: black;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1>Event Listners</h1>
+        <div id="ex">
+            <div class="eg">
+                <h5>Example 1</h5>
+                <a onclick="window.alert('I love javascript!')" href="#">Enter</a>
+            </div>
+            <div class="eg">
+                <h5>Example 2</h5>
+                <a onclick="showAlert();" href="#" id="btn-2">Enter</a>
+            </div>
+            <div class="eg">
+                <h5 id="ex-3">Example 3</h5>
+                <a href="#" id="btn-3">Enter</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    'use strict';
+    // Events in js: 
+    const btn2 = document.getElementById('btn-2');
+    // function showAlert(){
+    //     alert('You love javascript!');
+    // }
+
+    const showAlert = () => {
+        alert('You love javascript!');
+    }
+    // btn2.addEventListener('click', showAlert)
+
+    // btn2.addEventListener('click', () => {
+    //     alert('You love javascript!');
+    // })
+
+    const btn3 = document.getElementById('btn-3'),
+    ex3 = document.getElementById('ex-3'),
+    eg3 = document.getElementsByClassName('eg')[2];
+
+    btn3.addEventListener('mouseenter', () => {
+        ex3.style.backgroundColor = 'Yellow';
+    })
+
+    eg3.addEventListener('mouseleave', () => {
+        ex3.style.backgroundColor = 'blue';
+        eg3.style.backgroundColor = 'blue';
+    })
+    
+</script>
+</html>
+<!-- Next Class: Toggle event -->
