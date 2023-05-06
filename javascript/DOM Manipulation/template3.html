@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+</head>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 1rem;
+    }
+
+    body{
+        background-color: darkcyan;
+    }
+
+    h1{
+        font-size: 3rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        margin: 2rem;
+        color: white;
+    }
+
+    .outer-div{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .box{
+        height: 13rem;
+        background-color: cyan;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #box1{
+        width: 17rem;
+        cursor: pointer;
+    }
+
+    #box2{
+        width: 70rem;
+        padding: 0 2rem;
+    }
+    .hide{
+        display: none;
+    }
+</style>
+<body>
+    <h1>Event Listeners</h1>
+    <div class="outer-div">
+        <div class="box" id="box1">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="box" id="box2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati aspernatur earum facilis officiis voluptatem soluta suscipit error totam! Enim eius neque, non modi voluptatibus iure? Rem doloribus aliquam distinctio repudiandae sunt similique provident ratione modi quis maiores fugiat cupiditate at, esse nulla blanditiis deleniti quisquam unde tempora incidunt molestiae? Aspernatur qui nisi explicabo placeat provident, tempora ab autem delectus eum distinctio sunt sint! Aperiam voluptatibus minima numquam totam explicabo itaque quibusdam aut nam est expedita?</div>
+    </div>
+</body>
+<script>
+    let showHideBtn = document.getElementById('box1');
+    let content = document.getElementById('box2');
+    /*
+    showHideBtn.addEventListener('click', () => {
+        if (content.classList.contains('hide')){
+            content.classList.remove('hide');
+            showHideBtn.innerText = "Hide";
+        }
+        else{
+            content.classList.add('hide');
+            showHideBtn.innerText = "Reveal";
+        }
+    })
+    */
+    
+    showHideBtn.addEventListener('click', () => {
+        content.classList.toggle('hide');
+    })
+    
+</script>
+</html>
