@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, rgb(4, 15, 41), rgb(15, 28, 54), rgb(23, 38, 69), rgb(45, 59, 88), rgb(62, 78, 112))
+    }
+    .b2{
+        border: white 3px solid;
+        border-radius: 1rem;
+        height: 30rem;
+        width: 45rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .b1{
+        border: white 3px solid;
+        border-radius: 1rem;
+        height: 25rem;
+        width: 25rem;
+        margin: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    p{
+        color: white;
+        font-size: 3rem;
+        margin: 1.5rem;
+    }
+    a{
+        color: white;
+        font-size: 2rem;
+        text-decoration: none;
+        margin: 2rem;
+    }
+
+</style>
+<body>
+    <div class="b2">
+        <p>2</p>
+        <div class="b1">
+            <p>1</p>
+            <a id="link" href="#">Click</a>
+        </div>
+    </div>
+</body>
+<script>
+    // event propagation
+    let link = document.getElementById('link');
+    let innerBox = document.querySelector('.b1');
+    let outerBox = document.querySelector('.b2');
+    let body = document.querySelector('body');
+
+    link.addEventListener('click', () => {
+        console.log("link clicked!")
+    }, true);
+    
+    innerBox.addEventListener('click', () => {
+        console.log("inner box clicked!")
+    }, true);
+    
+    outerBox.addEventListener('click', (e) => {
+        console.log("outer box clicked!");
+        e.stopPropagation();
+        
+        // Next Class: console.log(e);
+
+    }, true);
+    
+    body.addEventListener('click', () => {
+        console.log("body clicked!")
+    }, true);
+    
+    window.addEventListener('click', () => {
+        console.log("window clicked!")
+    }, true);
+
+</script>
+</html>
