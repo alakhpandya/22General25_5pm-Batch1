@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/temp5.css">
+</head>
+<body> 
+    <div class="main_div">
+        <ul style="list-style-type: none;">
+            <li class="sports">Football</li>
+            <li class="sports">Basketball</li>
+            <li class="sports">Boxing</li>
+            <li class="sports">Tennis</li>
+            <li class="sports">Golf</li>
+            <li class="sports">Rugby</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // Event deligation
+    let main = document.querySelector('.main_div');
+
+    main.addEventListener('click', (e) => {
+        // console.log(e);
+        // main.style.backgroundColor = 'orangered';
+        e.target.style.backgroundColor = 'orangered';
+    })
+</script>
+</html>

@@ -1,0 +1,28 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(11,22,44);
+    background: linear-gradient(180deg, rgba(11,22,44,1) 0%, rgba(62,78,110,1) 100%);
+    height: 750px;
+}
+.main_div{
+    color: white;
+    margin-left: 40%;
+    margin-top: 10%;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 200px;
+    height: 320px;
+    padding: 20px;
+}
+.sports{
+    border: 2px solid white;
+    height: 40px;
+    text-align: center;
+    align-self: center;
+    padding-top: 10px;
+    margin: 5px;
+}
