@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    .bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: url("road-1072823_1280.jpg") center/cover no-repeat;
+        z-index: -1;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .modal-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: aliceblue;
+        height: 100px;
+        width: 150px;
+        border-radius: 3px;
+
+        /* animation-name: moveModal; */
+        animation-duration: 0.5s;
+        display: none;
+    }
+
+    .modal-container p {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    #close-btn {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 1.5rem;
+    }
+
+    .modal-btn {
+        background-color: transparent;
+        border: solid aliceblue;
+        border-radius: 10px;
+        padding: 0.5rem 1.5rem;
+        color: aliceblue;
+        font-size: 1rem;
+        font-weight: 800;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 3px;
+        position: absolute;
+        bottom: 45px;
+        left: 45px;
+        cursor: pointer;
+    }
+
+    .modal-btn:hover {
+        background-color: aliceblue;
+        color: black;
+    }
+
+    @keyframes moveModal {
+        from {
+            top: -100px;
+        }
+
+        to {
+            top: 50%;
+        }
+    }
+</style>
+
+<body>
+    <div class="bg-img"></div>
+    <div class="modal-container">
+        <!-- <i class="fa-solid fa-xmark" id="logo"></i> -->
+        <i class="fa-solid fa-rectangle-xmark" id="close-btn" style="cursor: pointer;"></i>
+        <p>Here I am !</p>
+    </div>
+    <button class="modal-btn">Where's our Model ?</button>
+</body>
+<script src="main.js"></script>
+
+</html>
