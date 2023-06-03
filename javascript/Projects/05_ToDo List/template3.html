@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Template 3</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url('bg-img.jpeg');
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    input,
+    button {
+        font-size: 1.5rem;
+        padding: 0.5rem 2rem;
+        border-radius: 10px;
+    }
+
+    input {
+        width: 30rem;
+    }
+
+    button {
+        width: 5rem;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: white;
+    }
+
+    .box {
+        width: fit-content;
+        height: fit-content;
+        background-color: white;
+        padding: 1rem;
+        display: flex;
+        border-radius: 10px;
+        gap: 2rem;
+    }
+
+    .task-container{
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    .task{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+    }
+
+    .task-icon{
+        border: solid 1px;
+        padding: 0.3rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .edit-icon{
+        color: black;
+    }
+    .edit-icon:hover{
+        background-color: black;
+        color: white;
+        border-color: black;
+    }
+
+    .check-icon{
+        color: green;
+    }
+    .check-icon:hover{
+        background-color: green;
+        color: white;
+        border-color: green;
+    }
+
+    .trash-icon{
+        color: red;
+    }
+    .trash-icon:hover{
+        background-color: red;
+        color: white;
+        border-color: red;
+    }
+
+    .task-seperator{
+        margin: 0.5rem 0;
+        background-color: black;
+        color: black;
+    }
+    .show-task-container{
+        padding: 1rem;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <input type="text" name="" id="task-input" placeholder="Enter Task">
+            <button id="add-task">+</button>
+        </div>
+        <div class="task-container">
+            <!-- <div class="task">
+                <p class="task-text">Walk the dog</p>
+                <div class="task-options">
+                    <i class="fa-solid fa-edit task-icon edit-icon"></i>
+                    <i class="fa-solid fa-check task-icon check-icon"></i>
+                    <i class="fa-solid fa-trash task-icon trash-icon"></i>
+                </div>
+            </div>
+            <hr class="task-seperator">
+            <div class="task">
+                <p class="task-text">Walk the cat</p>
+                <div class="task-options">
+                    <i class="fa-solid fa-edit task-icon edit-icon"></i>
+                    <i class="fa-solid fa-check task-icon check-icon"></i>
+                    <i class="fa-solid fa-trash task-icon trash-icon"></i>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
