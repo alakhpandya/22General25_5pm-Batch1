@@ -21,7 +21,7 @@ c1.price = 30000000
 # print("Price:", c1.price)
 # print("Seating:", c1.seating_capacity)
 # print()
-c1.displayDetails()
+# c1.displayDetails()
 
 c2 = Car()
 # Object Variables
@@ -34,4 +34,23 @@ c2.price = 25000000
 # print("Price:", c2.price)
 # print("Seating:", c2.seating_capacity)
 # print()
+c2.displayDetails()
+print(c2.__dict__)
+
+c3 = Car()
+c3.model_name = "XUV700"
+c3.fuel = "Diesel"
+c3.price = 2700000
+c3.seating_capacity = 7
+
+c3.displayDetails()
+# c2.displayDetails()
+print(c3.__dict__)
+
+# MRO: Method Resolution Order
+"""
+Object variable has higher priority than class variable
+"""
+
+Car.seating_capacity = 5
 c2.displayDetails()
