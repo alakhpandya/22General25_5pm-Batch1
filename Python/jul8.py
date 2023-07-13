@@ -27,10 +27,18 @@ class Car:
 
     def updateDetails(self):
         print("Enter new details:")
-        self.name = input("Name: ")
-        self.fuel = input("Fuel: ")
-        self.price = int(input("Price: "))
-        self.seating_capacity = int(input("Seating: "))
+        name = input("Name: ")
+        if name != "":
+            self.name = name
+        fuel = input("Fuel: ")
+        if fuel != "":
+            self.fuel = fuel
+        price = input("Price: ")
+        if price != "":
+            self.price = int(price)
+        seating_capacity = input("Seating: ")
+        if seating_capacity != "":
+            self.seating_capacity = seating_capacity
 
 
 c0 = Car("Alto", "Petrol", 400000)
