@@ -1,3 +1,4 @@
+
 class Car:
     seating_capacity = 5
     all_cars = []
@@ -6,6 +7,7 @@ class Car:
         self.name = name
         self.fuel = fuel
         self.price = price
+        Car.all_cars.append(self)
 
     # Method
     def displayDetails(self):
@@ -40,14 +42,21 @@ class Car:
         if seating_capacity != "":
             self.seating_capacity = seating_capacity
 
+    @classmethod
+    def addNewCar(cls):
+        print("Enter the following details:")
+        name = input("Name: ")
+        fuel = input("Fuel type: ")
+        price = int(input("Price: "))
+        return cls(name, fuel, price)
 
 c0 = Car("Alto", "Petrol", 400000)
 # c1.displayDetails()
-Car.all_cars.append(c0)
+# Car.all_cars.append(c0)
 
 c1 = Car("i20", "Diesel", 1000000)
 # c2.displayDetails()
-Car.all_cars.append(c1)
+# Car.all_cars.append(c1)
 
 # print(Car.all_cars)
 
@@ -61,7 +70,7 @@ while True:
 
     op = int(input())
     if op == 1:
-        pass
+        Car.addNewCar()
     
     elif op == 2:
         c = Car.showInventory()
@@ -72,7 +81,8 @@ while True:
         Car.all_cars[c].updateDetails()
 
     elif op == 4:
-        pass
+        c = Car.showInventory()
+        Car.all_cars.pop(c)
 
     elif op == 5:
         break
