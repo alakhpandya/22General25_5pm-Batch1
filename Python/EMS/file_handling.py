@@ -99,14 +99,14 @@ f.close()
 # f = open("ourBatch.txt", "r+t")
 # f.write("Some text")
 # f.close()
-
+"""
 f = open("ourBatch.csv")
 data = f.readlines()
 f.close()
 
 stu = data[14]
 print(stu)
-
+"""
 # f = open("ourBatch.txt", "w")
 # f.write("Hello World!")
 # print(f.writable())
@@ -114,3 +114,114 @@ print(stu)
 # f.close()
 
 # CSV: Comma Seperated Values
+"""
+f = open("ourBatch.csv", "a+t")
+# f.write("22,Krupa,Student\n")
+f.seek(0)
+print(f.read())
+f.close()
+"""
+'''
+f = open("ourBatch.csv", "r")
+data = f.readlines()
+f.close()
+print(data)
+
+while True:
+        print("Press 1 to add a new student")
+        print("Press 2 to see details of an existing student")
+        print("Press 3 to update details of a student")
+        print("Press 4 to delete a student")
+        print("Press 9 to exit")
+        ch = int(input())
+
+        if ch == 1:
+                print("Enter the following details:")
+                sr = str(len(data))
+                name = input("Name: ")
+                role = input("Role: ")
+
+                if "\n" in data:
+                        sr = data.index("\n")
+                        data.pop(sr)
+                        data.insert(sr, f"{str(sr)},{name},{role}\n")
+                else:
+                        data.append(f"{sr},{name},{role}\n")
+
+        elif ch == 2:
+                sr = int(input("Sr no: "))
+                student_info = data[sr].split(",")
+                sr, name, role = student_info
+                role = role.rstrip()
+                print(f"------------ Info of sr no:{sr} ------------")
+                print("Name:", name)
+                print("Role:", role)
+
+        elif ch == 3:
+                sr = int(input("Sr no: "))
+                student_info = data[sr].split(",")
+                sr2, name, role = student_info
+                role = role.rstrip()
+                print(f"------------ Update details of sr no: {sr} ------------")
+                print("Field\tOld\tNew".expandtabs(10))
+                new_name = input(f"Name\t({name}):\t".expandtabs(10))
+                new_role = input(f"Role\t({role}):\t".expandtabs(10))
+                data.pop(sr)
+                data.insert(sr, f"{str(sr)},{new_name},{new_role}\n")
+
+        elif ch == 4:
+                sr = int(input("Sr no: "))
+                removed_student = data.pop(sr)
+
+                # shifting serial nos of rest of all:
+                """
+                for i in range(sr, len(data)):
+                        temp = data[i].split(",")
+                        data.pop(i)
+                        new_sr = int(temp[0]) - 1
+                        temp[0] = str(new_sr)
+                        data.insert(i, (",".join(temp)))
+                """
+                
+                # inserting null string in place of removed student
+                data.insert(sr, "\n")
+                print(f"{removed_student.split(',')[1]} has been removed successfully...")
+
+        elif ch == 9:
+                f = open("ourBatch.csv", "w")
+                f.writelines(data)
+                f.close()
+                break
+
+        else:
+                print("Invalid option, please try again...")
+'''
+
+"""
+f = open("myCollection.csv")
+data = f.readlines()
+f.close()
+
+sr = int(input("Sr no: "))
+album_info = data[sr].split(",")
+
+print("Artist:", album_info[1])
+print("Album Name:", album_info[2])
+"""
+
+import csv
+
+f = open("myCollection.csv")
+# data = list(csv.reader(f))
+# for row in data:
+#     print(row)
+
+# title = data.pop(0)
+# print(title)
+# print(data)
+
+data = csv.reader(f)
+title = next(data)
+print(title)
+print(list(data))
+f.close()
