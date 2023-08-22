@@ -23,6 +23,7 @@ rating by manager
 promotion that increments salary automatically
 """
 import sys
+from employees import Employee
 from admin import Admin
 from peon import Peon
 from developer import Developer
@@ -90,9 +91,12 @@ p1 =Peon("Ramesh", 22, "M")
 # p1.display_details()
 a1 = Admin("Rajeev", 28, "M")
 
-department_code = login()
-if not department_code:
-    print("Your account has been blocked. Call customer care center to re-activate it.")
-    sys.exit()
+# print(Employee.all_employees)
+Employee.writeToCSV()
+
+# department_code = login()
+# if not department_code:
+#     print("Your account has been blocked. Call customer care center to re-activate it.")
+#     sys.exit()
 
 # Next class: validations, more functionalitites to this program.
