@@ -1,7 +1,14 @@
+from abc import ABC, abstractmethod     # abc: abstract base classes, ABC: Abstract Base Class
 from datetime import datetime
 import csv
 
-class Employee():
+"""
+Two purposes of abstraction:
+1. We want to stop instantiation in a class
+2. We want some methods tobe compulsory in every child class
+"""
+
+class Employee(ABC):
     working_days = 22
     all_employees = []
 
@@ -20,12 +27,21 @@ class Employee():
         self.pwd = name[:4] + self.id[:4]
         Employee.all_employees.append(self)
 
+        self._salary = 15000
+        self.__performance = 3
+
+    @abstractmethod
     def display_details(self):
         print("Name:", self.name)
         print("Age:", self.age)
         print("Gender:", self.gender)
         print("Designation:", self.designation)
         print("Department Code:", self.department_code)
+
+    @staticmethod
+    @abstractmethod
+    def testingMethod():
+        pass
 
     def createId(self):
         year = str(datetime.today().year)
@@ -69,5 +85,6 @@ if __name__ == "__main__":
     # print(isinstance(a, str))
     # e1 = Employee("Abc", 15.7, "F")
     # e1 = Employee("Hero", 15, "M")
-    e1 = Employee("Hero", 20, "M")
-    e1.display_details()
+    # e1 = Employee("Hero", 20, "M")
+    # e1.display_details()
+    pass

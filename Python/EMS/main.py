@@ -85,14 +85,18 @@ def login():
     return False
 
 
-gm1 = General_manager("Parth", 32, "M")
+# gm1 = General_manager("Parth", 32, "M")
 # gm1.display_details()
-p1 =Peon("Ramesh", 22, "M")
+# p1 =Peon("Ramesh", 22, "M")
 # p1.display_details()
-a1 = Admin("Rajeev", 28, "M")
+# a1 = Admin("Rajeev", 28, "M")
+# a1.display_details()
+
+# m1 = Manager("Rushir", 24, "M")
+# m1.display_details()
 
 # print(Employee.all_employees)
-Employee.writeToCSV()
+# Employee.writeToCSV()
 
 # department_code = login()
 # if not department_code:
